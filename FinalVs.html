@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--All In Common Are Before Noscript Tags.-->
+<!--
+    <div id = "nav">
+      <ul>
+        <li><a href = "https://david66775.github.io">Home</a></li>
+        <li><a href = "https://" style = "text-decoration: underline; color: rgb(230, 230, 230)">The Manager</a></li>
+      </ul>
+    </div>
+-->
+    <!--
+<style>
+      html {
+        height: 100%;
+        margin: 0;
+        box-sizing: border-box;
+        border: grey 25px groove;
+      }
+      body {
+        margin: 0;
+      }
+      ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #111111;
+}
+      #nav {
+        background-color: black;
+        margin-bottom: 30px;
+      }
+    </style>
+-->
+    <noscript>
+      <meta http-equiv = "refresh" content = "0; https://google.com">
+    </noscript>
+    <style>
+      html {
+        height: 100%;
+        margin: 0;
+        box-sizing: border-box;
+        border: grey 25px groove;
+      }
+      body {
+        margin: 0;
+      }
+      ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #111111;
+}
+      #nav {
+        background-color: black;
+        margin-bottom: 30px;
+      }
+    </style>
+    <script id = "define">
+      class MyCustomElement extends HTMLElement {
+        constructor() {
+          super();
+        }
+        connectedCallback() {
+          
+        }
+
+        disconnectedCallback() {
+          
+        }
+
+        static get observedAttributes() {
+            return ['my-attribute'];
+        }
+      }
+      function def(name, action) {
+        customElements.define(name, action);
+      }
+      def('t-el', 't-el');
+      def('p-c-el', 'p-c-el');
+    </script>
+    <meta charset = "Utf-8">
+  </head>
+  <body>
+    <div id = "nav">
+      <ul>
+        <li><a href = "https://david66775.github.io">Home</a></li>
+        <li><a href = "https://" style = "text-decoration: underline; color: rgb(230, 230, 230)">The Manager</a></li>
+      </ul>
+    </div>
+    <div id = "manager">
+    <div id = "protected" style = "display: none;">
+      <t-el contenteditable = "true">Protected Info Here</t-el> | |
+      <t-el contenteditable = "true" id = "passtoset">Set Password Here</t-el> | <!- seperators -!> | <p-c-el id = "set">Set It!</p-c-el> | |
+      <p-c-el id = "back">Back To Portal</p-c-el>
+    </div>
+    <div id = "portal" style = "display: none;"><p><t-el id = "pass" contenteditable = "true">Password Here (The default is "password".)</t-el> | <!- seperators -!> | <p-c-el id = "check">Check</p-c-el></p></div>
+    <div id = "thefullscreen"><p-c-el id = "fullscreenBtn" style = "font-size: 50px; border-width: 2px; border-color: black; border-style: solid;">Go Fullscreen (Required)</p-c-el></div>
+    <script>
+      let passenter = document.getElementById("pass");
+      let setpassel = document.getElementById("passtoset");
+      let passsetbutton = document.getElementById("set");
+      let password = "password";
+      let back = document.getElementById("back");
+      let protected = document.getElementById("protected");
+      let checkpass = document.getElementById("check");                        //coding one big software
+      let portal = document.getElementById("portal");                          //one little line at a time
+      let fsdiv = document.getElementById("thefullscreen");                    //take the bug
+const fsBtn = document.getElementById("fullscreenBtn");                        //patch it around
+const fullscreenTimeout = setTimeout(() => {                                   //156 bugs in the code
+    window.open("", "_self");                                                  //
+    window.close();                                                            //
+}, 1500);                                                                      //
+fsBtn.addEventListener("click", () => {                                        //
+    clearTimeout(fullscreenTimeout);                                           //
+    fsBtn.setAttribute("style", "display: none;");                             //
+    fsdiv.setAttribute("style", "display: none;");                             //
+  portal.setAttribute("style", "");
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch((err) => {
+            window.open("", "_blank");
+            window.close();
+        });
+    }
+});
+      back.addEventListener("click", function() {
+        protected.setAttribute("style", "display: none;");
+        portal.setAttribute("style", "");
+      });
+      passsetbutton.addEventListener("click", function() {
+        password = setpassel.innerText.trim();
+      });
+      
+      checkpass.addEventListener("click", function() {
+        if (passenter.innerText.trim() === password) {
+          portal.setAttribute("style", "display: none;");
+          protected.setAttribute("style", "");
+        }
+      });
+document.addEventListener("fullscreenchange", () => {
+    if (!document.fullscreenElement) {
+    window.open("", "_self");
+    window.close();
+    } else {
+      
+    }
+});
+document.addEventListener("keydown", function(event) {
+  const key = event.key.toLowerCase();
+  if (event.ctrlKey && key === "u") {
+    event.preventDefault();
+  }
+  if (event.ctrlKey && key === "i") {
+    event.preventDefault();
+  }
+  if (key === "f12") {
+    event.preventDefault();
+  }
+  if (event.ctrlKey && event.shiftKey && key === "j") {
+    event.preventDefault();
+  }
+  if (event.ctrlKey && event.shiftKey && key === "c") {
+    event.preventDefault();
+  }
+  if (event.ctrlKey && event.shiftKey && key === "m") {
+    event.preventDefault();
+  }
+});
+window.addEventListener('contextmenu', (event) => {
+  event.preventDefault();
+});
+    </script>
+    </div>
+  </body>
+</html>
